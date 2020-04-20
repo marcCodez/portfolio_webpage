@@ -1,0 +1,103 @@
+* {
+	box-sizing: border-box;
+	/* allows us to include the padding and border in an element's total width and height.
+    ensures that all elements are sized in this more intuitive way. Many browsers already use box-sizing: border-box; for many form elements (but not all - which is why inputs and text areas look different at width: 100%;).
+Applying this to all elements is safe and wise */
+}
+
+body {
+	background-color: #e09f3e;
+	font-family: Space Mono;
+	margin: 0;
+}
+
+nav {
+	background-color: #335c67;
+	display: flex;
+	padding: 15px;
+	justify-content: flex-end; /* move flexible container items */
+	color: white;
+}
+
+nav a {
+	color: white;
+	text-decoration: none; /*removes underline and other decorations */
+}
+
+footer {
+	background-color: #335c67;
+	color: white;
+	padding: 10px;
+	text-align: right;
+}
+
+.about {
+	background-image: url("https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+	background-size: cover;
+	background-position: center;
+	height: 60vh; /* A value of 1vh is equal to 1% of the viewport height.*/
+	position: relative; /* element is positioned relative to itself */
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column; /* moves the elements under each other */
+}
+
+.about::after {
+	/* to create the overlay on top of our about section */
+	content: "";
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.6;
+}
+
+.about * {
+	/* bring all elements in the about section to the front */
+	position: relative;
+	z-index: 1;
+}
+
+.about h1 {
+	font-size: 65px;
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+
+.about p {
+	font-size: 35px;
+	margin: 0;
+}
+
+section {
+	padding: 15px;
+	text-align: center;
+}
+
+#contact {
+	color: white;
+}
+
+.contact-elements {
+	/* creating a flex box container for the elements */
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.contact-elements a {
+	/* now styling the elements in the box */
+	color: white;
+	font-size: 40px;
+	margin: 30px;
+}
+
+#contact {
+	background-image: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
